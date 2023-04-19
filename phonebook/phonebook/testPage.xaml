@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="phonebook.testPage">
+    <ContentPage.Content>
+        <StackLayout >
+
+            <StackLayout Orientation="Horizontal" Padding="5,20,5,10"  >
+                <Picker WidthRequest="10" TitleColor="White" Background="skyblue"
+                        x:Name="titlepicker" Title="Title" HorizontalOptions="FillAndExpand" >
+                    <Picker.Items>
+                        <x:String>Mr.</x:String>
+                        <x:String>Miss.</x:String>
+                        <x:String>Mrs.</x:String>
+                        
+                    </Picker.Items>
+                    
+                </Picker>
+
+                <Entry x:Name="nameentry" Placeholder="Enter your name" BackgroundColor="SkyBlue" WidthRequest="280"  />
+                        
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" Padding="5,10,5,0"  >
+                <Picker WidthRequest="10" TitleColor="White" Background="skyblue"
+                        x:Name="conpicker" Title="Title" HorizontalOptions="FillAndExpand" >
+                    <Picker.Items>
+                        <x:String>Mobile</x:String>
+                        <x:String>LandLine</x:String>
+                       
+
+                    </Picker.Items>
+
+                </Picker>
+
+                <Entry x:Name="numentry" Placeholder="Enter your contact" Keyboard="Numeric" BackgroundColor="RosyBrown" WidthRequest="280"  />
+
+
+
+            </StackLayout>
+
+
+            <Entry x:Name="mailentry" BackgroundColor="green" TextColor="White" PlaceholderColor="White"
+                   Keyboard="Email" Placeholder="Enter your mail" Margin="80,20,0,0"  />
+
+
+            <Button x:Name="mybtn" Text="Save" Clicked="Button_Clicked" HeightRequest="50" Margin="50,50,50,0" CornerRadius="15" 
+                    BackgroundColor="Pink" TextColor="black" FontSize="20" FontAttributes="Bold"  />
+
+
+            <Button x:Name="mybtn2" Text="home" Clicked="mybtn2_Clicked" HeightRequest="50" Margin="50,50,50,0" CornerRadius="15" 
+                    BackgroundColor="Pink" TextColor="black" FontSize="20" FontAttributes="Bold"  />
+        </StackLayout>
+
+        
+        
+    </ContentPage.Content>
+</ContentPage>

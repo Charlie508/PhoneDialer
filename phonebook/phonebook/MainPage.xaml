@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:phonebook"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            x:Class="phonebook.MainPage" 
+            android:TabbedPage.ToolbarPlacement="Bottom" 
+            BackgroundColor="Transparent"
+            NavigationPage.HasNavigationBar="False"
+            SelectedTabColor="Green"
+            UnselectedTabColor="Red"
+            >
+
+    <local:contacts Title="contacts" BackgroundColor="DarkGray" IconImageSource="man.png"  >
+
+    </local:contacts>
+
+    <local:speeddial Title="speeddial"   IconImageSource="dial.png" >
+
+    </local:speeddial>
+
+</TabbedPage>

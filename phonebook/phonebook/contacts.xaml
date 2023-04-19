@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:phonebook"
+             x:Class="phonebook.contacts"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <ContentPage.Content>
+
+        <StackLayout Margin="0,10,10,0">
+
+
+            <StackLayout  Orientation="Horizontal" HeightRequest="50"  
+                     VerticalOptions="Start" >
+
+                <ImageButton Source="mypic.png" CornerRadius="100" Margin="5,0,0,0"
+                         Clicked="ImageButton_Clicked" >
+                </ImageButton>
+
+                <SearchBar BackgroundColor="Black"  Opacity="0.5" Placeholder="Search" 
+                       PlaceholderColor="white" HorizontalTextAlignment="Center" Margin="5" 
+                           TextColor="White" FontAttributes="Bold"  
+                           >
+
+                </SearchBar>
+
+
+            </StackLayout>
+            <ListView x:Name="mylist" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Horizontal" >
+
+                                <StackLayout HorizontalOptions="StartAndExpand" >
+                                    <Label Text="{Binding fullname}" TextColor="black"  />
+                                </StackLayout>
+                                
+                            </StackLayout>
+                            
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ImageButton x:Name="addbtn" 
+                   VerticalOptions="EndAndExpand"  HorizontalOptions="End"   BorderWidth="0"
+                     Margin="0,0,10,20"  HeightRequest="70" WidthRequest="70"  Padding="12" CornerRadius="70"
+                    Clicked="addbtn_Clicked" Source="add.png" BackgroundColor="DarkGreen" 
+                    />
+            <Button x:Name="refbtn" Text="refresh" Clicked="refbtn_Clicked" />
+
+
+
+        </StackLayout>
+
+
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>
+       
+                     
